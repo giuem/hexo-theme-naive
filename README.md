@@ -2,7 +2,7 @@
 
 A simple theme without javascript but with only one css file (3kb gzipped).
 
-This theme was wrote when I'm a naive front-end developer, so i named it `naive`:new_moon_with_face:.
+This theme was wrote when I'm a naive front-end developer, so i named it `naive`. :new_moon_with_face:
 
 **Notice: This theme is not maintained any more, I create this repo just for backup.**
 

@@ -1,0 +1,39 @@
+<head>
+  <meta charset="UTF-8"><%
+ var title = page.title;
+ if (is_archive()){
+    title = __('title.archives');
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('title.category') + ': '  + page.category;
+  } else if (is_tag()){
+    title = __('title.tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> - <% } %><%= config.title %><% if (!title && config.subtitle && theme.subtitle_show){ %> - <%= config.subtitle %><% } %></title>
+
+<% if (config.author){ %>
+  <meta name="author" content="<%= config.author %>">
+<% } %>
+<% if (page.description){ %>
+  <meta name="description" content="<%= page.description %>">
+<% } else if (page.excerpt){ %>
+  <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
+<% } else if (config.description){ %>
+  <meta name="description" content="<%= config.description %>">
+<% } else if (page.content){ %>
+  <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+<% } %>
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="applicable-device"content="pc,mobile">
+  <% if (theme.favicon){ %><link rel="icon" href="<%- theme.favicon %>"><% } %>
+  <% if (theme.rss){ %><link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml"><% } %>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>

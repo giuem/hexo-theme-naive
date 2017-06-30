@@ -1,0 +1,8 @@
+<section class="tags">
+    <h3 class="aside-title">Tags</h3>
+    <% site.tags.sort('posts.length','desc').limit(10).each(function(item){ %>
+        <% if(item.posts.length){ %>
+            <a class="tag" href="<%- config.root %><%- item.path %>" title="<%= item.name %>" class="tag"><%= item.name %> [<%= item.posts.length %>]</a>
+        <% } %>
+    <% }); %>
+</section>

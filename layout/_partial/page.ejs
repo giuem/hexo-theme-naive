@@ -1,0 +1,23 @@
+<article class="post">
+  <header class="post-head">
+    <%- partial('post/title') %>
+  </header>
+  <% if (post.images){ %>
+      <section class="post-images">
+        <a href="<%- url_for(post.path) %>">
+          <img src="<%- post.images %>" width="1000" height="400" alt="images">
+        </a>
+      </section>
+  <% } %>
+  <div class="post-content">
+    <%- post.content %>
+  </div>
+  <% if (post.tags && post.tags.length){ %>
+  <footer class="post-foot clear">
+    <%- partial('post/tag') %>
+  </footer>
+  <% } %>
+  <% if(page.comments){ %>
+      <%- partial('post/comment') %>
+  <% } %>
+</article>

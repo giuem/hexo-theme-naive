@@ -1,0 +1,9 @@
+<% if (is_home() && !page.prev && theme.links){ %>
+    <section class="friends">
+        <h3 class="aside-title">Friends</h3>
+        <% var links = theme.links;
+        for(var i in links){ %>
+            <%- link_to(links[i], i, {external: true}) %>
+        <% } %>
+    </section>
+<% } %>

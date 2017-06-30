@@ -1,0 +1,92 @@
+#header{
+    z-index: 9;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    box-shadow: 0 0 1px rgba(0,0,0,.15);
+}
+
+#header-warp
+{
+    line-height: 65px;
+
+    overflow: hidden;
+
+    width: 90%;
+    max-width: 1000px;
+    height: 65px;
+    margin: 0 auto;
+}
+#logo
+{
+    display: inline-block;
+    float: left;
+
+    height: 100%;
+}
+#logo > a
+{
+
+    //display: block;
+    //overflow: hidden;
+
+    //width: 100px;
+
+    //white-space: nowrap;
+    //text-indent: 110%;
+
+    font-size: 22px;
+    color: #444;
+    //background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABBCAYAAAAngwHRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA19JREFUeNrsnIFx4jAQReUMBbiD81VwXAXnVBCuA9MBVMClgpAKzFUQUgGkAugAOoAOfFZmlVsUSysZJzjJ/zMahtiW5H1a7XrNJKmqSkH90RVMACAQgAAIBCAAAgEIgEAAAiAQgEAAAiAQgAAIBCAAAgEIgEAAAjVL/8gh4IcORd3Kuq30JdR29H1StyxwuDtqLj1QfzEa0TxSz5hVZDtQv1wzml9XKmjemWHwzEEAMqHJhdxE6THKC39qvuOryBub0XW54/iqBZCqAYjpZ9IBjJTZNQ8Bklo3UtIEbYPntAIPbGVlPQVyrlaB9xiiktlCBKKNvqGT9ecwkHgpGOazAKnO3LpyyxNFICsGI1Xd6jMA2QUsPJ82dj8cyFVDzNADbet2Xbcj0p5XmrJtJ1YT2nHWdVtIaW9Kq01rDBhOLcmgGbNXaCCfWVC9QEzQXpCHQG6N2YqPSfm1ff/47MuB3NDnI+wtak+GTYXnKh7IC7ru3nfiwLrIuKSvY0nHL+Jht2TkEdllLXiH2aqOoUBS4eQiIpD97CGUkOxtGjnvMfWr7fLdkwWaQL6UOhw0uKJLpkNfKjyk42kPV3SId99EAjE2GZHhb63jGXuyH4d0OGgwqG/f/B2wCvOebjHXgQZukwbnZPi/1qLmgXwfC2RLQLLQiz+Y1m/Ur7bVnIxeMvA5eY4YyF1Z1jrCtaHXAX7PIPAHRzGQu4A8siD0kTTsyTzGbJu6o51mGRLIT2TVss4tMZvrXV4m1bIO1GK0E/rsupbl04M6fafie2h8qcH5allTRvkSK89kcUVE5pS9YXxoE+DN9jRvFYsbqr0FI1xEdJUquRIqeUjOxk4DxtsoufL6nh5i7BdSnm/0ENcLqkKdvpyS6jX2m8W2QIx3mvK0y0szBqPsyJDqnfrxAhk4Tl6Q65UEp6C0eNkQUHO2mo8dPBRO2ba1oTGfWFr+g3nuIvSBq0X2uFWXqHgL79RNyXin5PfpQxbUzvEQo5Fn3ENE4tH2nfrsEh6SGBhJkoSkl7p9Y397slaS8Zi5x8gqMhXU/f2yxowJ4kP1v5Ido3vLQ9rMXZrXs624QyT4Xyf9En4oByAQgAAIBCAAAgEIgEAAAiAQgEAAAiAQgAAIBCAAAgEIgEAAAjXrnwADANqTyjG71yYMAAAAAElFTkSuQmCC') no-repeat left center;
+}
+#nav
+{
+    float: right;
+
+    height: 100%;
+}
+
+#nav a
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-left: 30px;
+
+    color: rgba(0, 0, 0, .6);
+}
+
+#nav a::after
+{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+
+    display: inline-block;
+
+    width: 0;
+    height: 1px;
+
+    content: ' ';
+
+    opacity: 0;
+    background-color: #000;
+}
+
+#nav a:hover
+{
+    color: #000;
+}
+
+#nav a:hover::after
+{
+    left: 0;
+
+    width: 100%;
+
+    opacity: 1;
+}

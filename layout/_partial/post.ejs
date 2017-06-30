@@ -1,0 +1,26 @@
+<article class="post">
+  <header class="post-head">
+    <%- partial('post/title') %>
+    <%- partial('post/date', {date_format: null}) %>
+  </header>
+  <% if (post.image){ %>
+      <section class="post-images">
+        <a href="<%- url_for(post.path) %>">
+          <img src="<%- post.image %>" alt="featured-image">
+        </a>
+      </section>
+  <% } %>
+  <div class="post-content">
+    <%- partial('post/toc') %>
+    <%- post.content %>
+  </div>
+  <footer class="post-foot">
+      <%- partial('post/tag') %>
+  </footer>
+  <% if(page.comments){ %>
+        <%- partial('post/comment') %>
+  <% } %>
+</article>
+<% if (!index){ %>
+    <%- partial('post/nav') %>
+<% } %>

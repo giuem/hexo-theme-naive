@@ -1,0 +1,17 @@
+# Header
+menu:
+  Archives: /archives/
+  About: /about/
+
+rss: /atom.xml
+
+favicon: /favicon.ico
+
+subtitle_show: true
+
+# disqus shortname
+disqus: giuem
+
+# siderbar links
+links:
+  Hexo: https://hexo.io/

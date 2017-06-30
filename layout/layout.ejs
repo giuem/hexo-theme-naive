@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<% 
+var home = '';
+if (is_home()) {
+    home = 'class="home"'
+}
+%>
+<body>
+  <%- partial('_partial/header') %>
+  <section id="content">
+    <main id="main"  <%- home %>><%- body %></main>
+    <%- partial('_partial/sidebar') %>
+  </section>
+  <%- partial('_partial/footer') %>
+</body>
+</html>

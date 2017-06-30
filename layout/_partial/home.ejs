@@ -1,0 +1,13 @@
+<% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+<% }) %>
+<% if (page.total > 1){ %>
+    <nav class="page-nav clear">
+      <% if (page.prev){ %>
+        <a class="prev" href="<%- url_for(page.prev_link) %>">&lt; Last</a>
+      <% } %>
+      <% if (page.next){ %>
+        <a class="next" href="<%- url_for(page.next_link) %>">Next &gt;</a>
+      <% } %>
+    </nav>
+<% } %>
